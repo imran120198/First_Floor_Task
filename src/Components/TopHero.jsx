@@ -14,7 +14,7 @@ const data = [
 
 const TopHero = () => {
   const settings = {
-    dots: false,
+    dots: true,
     infinite: true,
     autoplay: true,
     speed: 1000,
@@ -25,18 +25,16 @@ const TopHero = () => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
           dots: true,
         },
       },
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
+          slidesToShow: 1,
+          slidesToScroll: 1,
         },
       },
       {
@@ -48,24 +46,23 @@ const TopHero = () => {
       },
     ],
   };
+
   return (
-    <div className="w-full h-[350px] p-8">
-      <div className="w-[100%] m-auto mt-8">
-        <div className="mt-4 ">
-          <Slider {...settings}>
-            {data.map((elem) => (
-              <div className=" h-[100%] text-black rounded-xl p-2">
-                <div className="flex justify-center items-center rounded-t-xl">
-                  <img
-                    src={elem.img}
-                    className="w-full h-full object-cover  rounded-xl"
-                    alt=""
-                  />
-                </div>
+    <div className="w-full h-[350px] p-4">
+      <div className="w-full m-auto mt-4">
+        <Slider {...settings}>
+          {data.map((elem, index) => (
+            <div key={index} className="h-full text-black rounded-xl p-2">
+              <div className="flex justify-center items-center rounded-t-xl h-[350px]">
+                <img
+                  src={elem.img}
+                  className="w-full h-full object-cover rounded-xl"
+                  alt=""
+                />
               </div>
-            ))}
-          </Slider>
-        </div>
+            </div>
+          ))}
+        </Slider>
       </div>
     </div>
   );
