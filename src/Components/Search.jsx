@@ -5,7 +5,7 @@ import { HiCurrencyRupee } from "react-icons/hi";
 
 const Search = () => {
   return (
-    <div className="absolute bottom-[-75px] left-1/2 transform -translate-x-1/2 bg-white w-[90%] md:w-3/4 lg:w-1/2 p-4 rounded-lg shadow-lg flex flex-col space-y-4 z-50">
+    <div className="absolute bottom-[-75px] left-1/2 transform -translate-x-1/2 bg-white w-[90%] md:w-3/4 lg:w-1/2 p-4 rounded-lg shadow-lg flex flex-col space-y-4 z-80">
       <div className="flex justify-around w-[150px] text-lg">
         <button className="cursor-pointer">Buy</button>
         <button className="cursor-pointer">Rent</button>
