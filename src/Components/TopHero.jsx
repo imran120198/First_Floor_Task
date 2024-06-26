@@ -11,6 +11,9 @@ const data = [
   {
     img: `https://zameensquare.com/_next/static/media/Get-Our-Mobile-App-Now-web(new).d119e432.gif`,
   },
+  {
+    img: `https://zameensquare.com/_next/static/media/homeHeaderImage.25bb3789.gif`,
+  },
 ];
 
 const TopHero = () => {
@@ -19,7 +22,7 @@ const TopHero = () => {
     infinite: true,
     autoplay: true,
     speed: 500,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 2000,
     slidesToShow: 1,
     slidesToScroll: 1,
     responsive: [
@@ -49,7 +52,7 @@ const TopHero = () => {
   };
 
   return (
-    <div className="relative w-[90%] h-[400px]">
+    <div className="relative w-[100%] h-[400px]">
       <div className="w-full m-auto mt-4">
         <Slider {...settings}>
           {data.map((elem, index) => (
