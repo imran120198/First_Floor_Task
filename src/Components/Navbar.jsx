@@ -1,51 +1,73 @@
 import React from "react";
+import { IoIosArrowDown } from "react-icons/io";
 
 const Navbar = () => {
   return (
-    <div>
-      <header className="w-full bg-white fixed top-0 z-50 opacity-120">
-        <nav
-          style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}
-          className="flex w-full py-2 md:py-3 px-4 md:px-20 items-center justify-between"
-        >
+    <nav className="w-full bg-white fixed top-0 z-50 opacity-120">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Mobile view */}
+        <div className="flex justify-between items-center h-16 sm:hidden">
+          <div className="flex-shrink-0 flex items-center">
+            <img
+              src="https://zameensquare.com/_next/static/media/zameen-mob-logo.74a5a37e.png"
+              alt=""
+            />
+          </div>
           <div className="flex items-center">
-            <div>
+            <button className="text-gray-600 bg-gray-50 hover:text-blue-500 px-2 py-1 rounded-md text-sm font-medium flex items-center">
+              Bengaluru
+              <IoIosArrowDown className="ml-1 h-4 w-4" />
+            </button>
+          </div>
+          <div className="flex items-center space-x-2">
+            <button className="bg-blue-500 text-white px-3 py-1 rounded-md text-sm font-medium">
+              Post Property
+            </button>
+            <button className="text-blue-500 border border-blue-500 px-3 py-1 rounded-md text-sm font-medium">
+              Login
+            </button>
+          </div>
+        </div>
+
+        {/* Desktop view */}
+        <div className="hidden sm:flex sm:justify-between sm:h-16">
+          <div className="flex items-center">
+            <div className="flex-shrink-0 flex items-center">
               <img
-                className="w-50 rounded-full"
                 src="https://zameensquare.com/_next/static/media/zameen-logo.be926326.png"
                 alt="logo"
               />
             </div>
-          </div>
-
-          <div className="flex items-center gap-4">
-            <ul className="hidden md:flex gap-6 mr-4">
-              <li>
-                <p className="text-lg font-normal text-blue">Buy</p>
-              </li>
-              <li>
-                <p className="text-lg font-normal  text-blue">Rent</p>
-              </li>
-              <li>
-                <p className="text-lg font-normal  text-blue">Sell</p>
-              </li>
-              <li>
-                <p className="text-lg font-normal  text-blue">PG</p>
-              </li>
-            </ul>
-
-            <div className="flex items-center gap-2">
-              <button className="text-lg text-white bg-blue-500 px-4 py-2 rounded-md">
-                Post Property
-              </button>
-              <button className="text-lg text-blue px-4 py-2 rounded-md border-blue-500">
-                Login
+            <div className="ml-6 flex space-x-8">
+              <button className="text-gray-600 bg-gray-50 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium flex items-center">
+                Bengaluru
+                <IoIosArrowDown className="ml-1 h-4 w-4" />
               </button>
             </div>
           </div>
-        </nav>
-      </header>
-    </div>
+          <div className="flex items-center space-x-4">
+            <p className="text-blue-500 px-3 py-2 rounded-md text-md font-medium">
+              Buy
+            </p>
+            <p className="text-blue-500 px-3 py-2 rounded-md text-md font-medium">
+              Rent
+            </p>
+            <p className="text-blue-500 px-3 py-2 rounded-md text-md font-medium">
+              Sell
+            </p>
+            <p className="text-blue-500 px-3 py-2 rounded-md text-md font-medium">
+              PG
+            </p>
+            <button className="bg-blue-500 text-white px-4 py-2 rounded-md text-sm font-medium">
+              Post Property
+            </button>
+            <button className="text-blue-500 border border-blue-500 px-4 py-2 rounded-md text-sm font-medium">
+              Login
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
   );
 };
 

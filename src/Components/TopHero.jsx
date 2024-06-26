@@ -2,6 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Search from "./Search";
 
 const data = [
   {
@@ -14,11 +15,11 @@ const data = [
 
 const TopHero = () => {
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     autoplay: true,
-    speed: 1000,
-    autoplaySpeed: 5000,
+    speed: 500,
+    autoplaySpeed: 3000,
     slidesToShow: 1,
     slidesToScroll: 1,
     responsive: [
@@ -48,12 +49,12 @@ const TopHero = () => {
   };
 
   return (
-    <div className="w-full h-[350px] p-4">
+    <div className="relative w-[90%] h-[400px]">
       <div className="w-full m-auto mt-4">
         <Slider {...settings}>
           {data.map((elem, index) => (
             <div key={index} className="h-full text-black rounded-xl p-2">
-              <div className="flex justify-center items-center rounded-t-xl h-[350px]">
+              <div className="flex justify-center items-center rounded-t-xl h-[400px]">
                 <img
                   src={elem.img}
                   className="w-full h-full object-cover rounded-xl"
@@ -64,6 +65,7 @@ const TopHero = () => {
           ))}
         </Slider>
       </div>
+      <Search />
     </div>
   );
 };
