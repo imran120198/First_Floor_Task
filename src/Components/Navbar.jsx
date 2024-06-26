@@ -21,16 +21,16 @@ const Navbar = () => {
           <div className="flex items-center gap-4">
             <ul className="hidden md:flex gap-6 mr-4">
               <li>
-                <p className="text-lg font-normal text-blue">Buy</p>
+                <p className="text-lg font-normal text-blue-500">Buy</p>
               </li>
               <li>
-                <p className="text-lg font-normal  text-blue">Rent</p>
+                <p className="text-lg font-normal  text-blue-500">Rent</p>
               </li>
               <li>
-                <p className="text-lg font-normal  text-blue">Sell</p>
+                <p className="text-lg font-normal  text-blue-500">Sell</p>
               </li>
               <li>
-                <p className="text-lg font-normal  text-blue">PG</p>
+                <p className="text-lg font-normal  text-blue-500">PG</p>
               </li>
             </ul>
 
